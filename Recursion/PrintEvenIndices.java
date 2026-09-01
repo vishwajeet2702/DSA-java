@@ -18,7 +18,7 @@ public static void one(int i,int n,int a[]) {
             return;
         }
   
-        int j=i+1;
+        int j=i+1; // using j such that the current index is not lost as it will be used later to display.
         one(j,n,a);
         if(i%2==0){
             System.out.print(a[i]+" ");
@@ -26,3 +26,7 @@ public static void one(int i,int n,int a[]) {
     }
 }
   
+//Explanation  - 
+//This is the example of head recursion
+//we will maintain a counter that will travers the array till the end i.e (i==n)
+//we will not use one(++i,n,a) because it a head recursion and we will ultimately get the wrong answer
